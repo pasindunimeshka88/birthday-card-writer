@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birthday Card Writer</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #fff4e6; max-width: 520px; margin: 40px auto; padding: 0 16px; }
+  h1 { text-align: center; }
+  form { display: grid; gap: 12px; }
+  input { padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px; }
+  button { padding: 12px; font-size: 1rem; background: #ff6b6b; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+  .card { margin-top: 24px; padding: 20px; background: #fff; border: 3px dashed #ff6b6b; border-radius: 10px; font-size: 1.15rem; line-height: 1.5; }
+  .error { color: #c0392b; }
+</style>
+</head>
+<body>
+<h1>🎂 Birthday Card Writer</h1>
+<form method="post">
+  <input name="name" placeholder="Name" value="{{name}}" required>
+  <input name="age" type="number" min="1" max="149" placeholder="Age" value="{{age}}" required>
+  <input name="hobby" placeholder="Hobby (e.g. fishing)" value="{{hobby}}" required>
+  <button type="submit">Write my message!</button>
+</form>
+{{result}}
+</body>
+</html>
